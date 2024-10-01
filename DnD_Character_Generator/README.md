@@ -21,3 +21,6 @@ This DnD Character Generator is a Python application that creates random charact
 
 Click the "Generate Character" button in the GUI to create a new D&D character.
 The character's details will be displayed in the text area, including their name, race, class, traits, hit die, primary ability, and ability scores.
+
+![DnD Character Generator](./images/screenshot.png)  
+*Example of the GUI interface.*
