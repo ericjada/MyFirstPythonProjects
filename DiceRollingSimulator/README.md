@@ -1,4 +1,4 @@
-# D&D Dice Rolling Simulator
+# D&D Dice Roller
 
 A simple dice rolling simulator designed for Dungeons & Dragons. This application allows users to roll various dice (d4, d6, d8, d10, d12, d20, and d100) with an easy-to-use graphical interface.
 
