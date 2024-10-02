@@ -17,6 +17,14 @@ This DnD Character Generator is a Python application that creates random charact
 3. **Name Generation**: Each character receives a random name from a predefined set of names based on their race, along with a unique title.
 4. **User Interface**: The application features a simple GUI built with Tkinter, allowing users to generate and view characters with a single click.
 
+## Installation
+
+1. **Download the Executable**:
+   Download the standalone executable from the [releases section](<https://github.com/ericjada/MyFirstPythonProjects/releases/tag/v1.0-dnd-character-generator>) of the repository.
+
+2. **Run the Application**:
+   Double-click the downloaded `.exe` file to launch the application.
+
 ## Usage
 
 Click the "Generate Character" button in the GUI to create a new D&D character.
