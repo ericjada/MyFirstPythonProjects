@@ -12,6 +12,8 @@ If you enjoy my work and would like to support my projects, consider making a do
         <img src="./QRCode/QRCode.png" alt="Donate via PayPal" />
     </a>
     <br />
+    <a href="https://www.paypal.com/donate/?hosted_button_id=NSFMYDYRMWMDY">Donate via PayPal</a>
+    <br />
     Thank you for your support!
 </p>
 
