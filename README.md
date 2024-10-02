@@ -7,11 +7,13 @@ Welcome to **My First Python Projects**! This repository is a collection of begi
 
 If you enjoy my work and would like to support my projects, consider making a donation via PayPal. Your contributions help me continue developing new projects. Every little bit helps!
 
+<p align="center">
 [Donate via PayPal](https://www.paypal.com/donate/?hosted_button_id=NSFMYDYRMWMDY)
 
 ![Donate via PayPal](./QRCode/QRCode.png)
 
 Thank you for your support!
+</p>
 
 ## Acknowledgments
 
