@@ -32,7 +32,7 @@ This project is a standalone executable application for logging blood pressure a
 ## Installation
 
 1. **Download the Executable**:
-   Download the standalone executable from the [releases section](<insert_link_to_releases>) of the repository.
+   Download the standalone executable from the [releases section](<https://github.com/ericjada/MyFirstPythonProjects/releases/tag/v1.0-blood-pressure-log>) of the repository.
 
 2. **Run the Application**:
    Double-click the downloaded `.exe` file to launch the application.
@@ -48,10 +48,3 @@ This project is a standalone executable application for logging blood pressure a
 
 The application saves the log to an Excel file named `BloodPressure_HeartRate_Log.xlsx` in the same directory as the executable.
 
-## Contributing
-
-Feel free to contribute to this project! You can submit issues or pull requests on the GitHub repository.
-
-## License
-
-This project is open-source and available under the MIT License.
