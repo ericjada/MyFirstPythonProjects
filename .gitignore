@@ -6,3 +6,6 @@ BloodPressure_HeartRate/BloodPressure_HeartRate.spec
 /ResinCalc/build
 ResinCalc/ResinCalc.spec
 /ResinCalc/dist
+AutoTextReplacer/auto_text_replacer.spec
+/AutoTextReplacer/build
+/AutoTextReplacer/dist
