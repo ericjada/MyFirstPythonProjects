@@ -12,7 +12,7 @@ The **Auto Text Replacer** is a simple utility that replaces predefined text sho
 
 ## Installation
 
-1. Download the latest version of the executable from the [releases](#) section.
+1. Download the latest version of the executable from the [releases](https://github.com/ericjada/MyFirstPythonProjects/releases/tag/v1.0-auto-text-replacer) section.
 2. Extract the files to a desired location on your computer.
 
 ## Usage
