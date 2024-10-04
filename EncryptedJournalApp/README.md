@@ -27,7 +27,7 @@ This project is designed to run as a standalone executable, making it easy for a
 ## Installation
 
 1. **Download the Executable**:
-   Download the standalone executable from the [releases section](<https://github.com/ericjada/MyFirstPythonProjects/releases>) of the repository.
+   Download the standalone executable from the [releases section](<https://github.com/ericjada/MyFirstPythonProjects/releases/tag/V1.0-encrypted-journal>) of the repository.
 
 2. **Run the Application**:
    Double-click the downloaded `.exe` file to launch the application.
