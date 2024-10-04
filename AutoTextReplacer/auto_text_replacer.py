@@ -10,6 +10,16 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 print(f"Working directory set to: {script_dir}")
 
+# Create default macros file
+def create_default_macros(file_path):
+    default_macros = """\
+lol: laughing out loud
+brb: be right back
+ttyl: talk to you later
+"""
+    with open(file_path, 'w') as f:
+        f.write(default_macros)
+
 # Load macros from a file
 def load_macros(file_path):
     macros = {}
@@ -20,7 +30,9 @@ def load_macros(file_path):
                     key, value = line.strip().split(':', 1)
                     macros[key.strip()] = value.strip()
     except FileNotFoundError:
-        print(f"Error: {file_path} not found.")
+        print(f"Error: {file_path} not found. Creating default macros file.")
+        create_default_macros(file_path)  # Create the default macros file
+        macros = load_macros(file_path)  # Load the newly created macros
     return macros
 
 # Function to replace text based on macros
@@ -80,7 +92,6 @@ root.geometry("400x200")  # Adjust the size as needed
 # Create and place a label to indicate restart requirement
 restart_label = tk.Label(root, text="Changes to 'macros.txt' will take effect after restarting the application.", padx=20, pady=10)
 restart_label.pack(pady=20)
-
 
 # Create and place a button to open macros.txt
 open_button = tk.Button(root, text="Edit Macros", command=open_macros_file, padx=20, pady=10)
