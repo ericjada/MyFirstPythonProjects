@@ -9,3 +9,6 @@ ResinCalc/ResinCalc.spec
 AutoTextReplacer/auto_text_replacer.spec
 /AutoTextReplacer/build
 /AutoTextReplacer/dist
+/EncryptedJournalApp/build
+EncryptedJournalApp/journal_app.spec
+/EncryptedJournalApp/dist
