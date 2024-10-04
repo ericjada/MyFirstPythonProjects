@@ -42,8 +42,8 @@ def replace_macros(macros):
 
 # Start the macro replacement in a separate thread
 def start_macro_replacement():
-    macro_file = 'macros.txt'  # Path to the user-defined macro file
-    macros = load_macros(macro_file)
+    global macros
+    macros = load_macros('macros.txt')
     if macros:
         print("Macro replacement is running.")
         replace_macros(macros)
@@ -74,9 +74,17 @@ stop_event = threading.Event()
 root = tk.Tk()
 root.title("Auto Text Replacer")
 
+# Set the window size (width x height)
+root.geometry("400x200")  # Adjust the size as needed
+
+# Create and place a label to indicate restart requirement
+restart_label = tk.Label(root, text="Changes to 'macros.txt' will take effect after restarting the application.", padx=20, pady=10)
+restart_label.pack(pady=20)
+
+
 # Create and place a button to open macros.txt
-open_button = tk.Button(root, text="Edit Macros", command=open_macros_file)
-open_button.pack(pady=20)
+open_button = tk.Button(root, text="Edit Macros", command=open_macros_file, padx=20, pady=10)
+open_button.pack(pady=10)
 
 # Set the window closing behavior
 root.protocol("WM_DELETE_WINDOW", on_closing)
