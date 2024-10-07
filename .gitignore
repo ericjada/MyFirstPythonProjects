@@ -12,3 +12,4 @@ AutoTextReplacer/auto_text_replacer.spec
 /EncryptedJournalApp/build
 EncryptedJournalApp/journal_app.spec
 /EncryptedJournalApp/dist
+LLM_Chat/files/Galaxy step core text.txt
