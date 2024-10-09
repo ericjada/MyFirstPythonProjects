@@ -8,18 +8,22 @@ current_directory = os.getcwd()
 # Set the path to the CSV file dynamically, assuming it is in the 'data' subdirectory
 data_path = os.path.join(current_directory, 'covid19_data_visualization', 'data', 'owid-covid-data.csv')
 
-# Print the path to verify
-print(f"Looking for the file at: {data_path}")
+# Set the path to the 'visualizations' directory
+visualizations_dir = os.path.join(current_directory, 'covid19_data_visualization', 'visualizations')
+
+# Ensure the 'visualizations' directory exists
+if not os.path.exists(visualizations_dir):
+    os.makedirs(visualizations_dir)
+
+# Print the paths to verify
+print(f"Looking for the data file at: {data_path}")
+print(f"Saving visualizations to: {visualizations_dir}")
 
 # Load the CSV data into a DataFrame
 data = pd.read_csv(data_path)
 
 # Convert the 'date' column to a datetime object for proper plotting
 data['date'] = pd.to_datetime(data['date'])
-
-# Ensure the 'visualizations' directory exists
-if not os.path.exists('visualizations'):
-    os.makedirs('visualizations')
 
 # Function to plot new cases over time for a specific country
 def plot_new_cases(data, country):
@@ -30,7 +34,7 @@ def plot_new_cases(data, country):
     plt.ylabel('New COVID-19 Cases')
     plt.title(f'Daily New COVID-19 Cases in {country}')
     plt.legend()
-    plt.savefig(f'visualizations/{country}_new_cases.png')  # Save the plot as a PNG file
+    plt.savefig(os.path.join(visualizations_dir, f'{country}_new_cases.png'))  # Save the plot as a PNG file
     plt.show()
 
 # Function to plot total cases and total deaths over time for a specific country
@@ -43,7 +47,7 @@ def plot_total_cases_and_deaths(data, country):
     plt.ylabel('Count')
     plt.title(f'Total COVID-19 Cases and Deaths in {country}')
     plt.legend()
-    plt.savefig(f'visualizations/{country}_cases_and_deaths.png')  # Save the plot as a PNG file
+    plt.savefig(os.path.join(visualizations_dir, f'{country}_cases_and_deaths.png'))  # Save the plot as a PNG file
     plt.show()
 
 # Function to plot 7-day rolling average of new cases for a specific country
@@ -56,7 +60,7 @@ def plot_7day_avg_new_cases(data, country):
     plt.ylabel('New COVID-19 Cases (7-day average)')
     plt.title(f'7-Day Rolling Average of New COVID-19 Cases in {country}')
     plt.legend()
-    plt.savefig(f'visualizations/{country}_7day_avg_new_cases.png')  # Save the plot as a PNG file
+    plt.savefig(os.path.join(visualizations_dir, f'{country}_7day_avg_new_cases.png'))  # Save the plot as a PNG file
     plt.show()
 
 # Function to plot case fatality rate (CFR) over time for a specific country
@@ -69,7 +73,7 @@ def plot_case_fatality_rate(data, country):
     plt.ylabel('Case Fatality Rate')
     plt.title(f'Case Fatality Rate Over Time in {country}')
     plt.legend()
-    plt.savefig(f'visualizations/{country}_cfr.png')  # Save the plot as a PNG file
+    plt.savefig(os.path.join(visualizations_dir, f'{country}_cfr.png'))  # Save the plot as a PNG file
     plt.show()
 
 # Function to compare new cases for multiple countries
@@ -82,7 +86,7 @@ def compare_new_cases(data, countries):
     plt.ylabel('New COVID-19 Cases')
     plt.title('New COVID-19 Cases Comparison')
     plt.legend()
-    plt.savefig('visualizations/comparison_new_cases.png')  # Save the plot as a PNG file
+    plt.savefig(os.path.join(visualizations_dir, 'comparison_new_cases.png'))  # Save the plot as a PNG file
     plt.show()
 
 # Call functions to visualize data for the United States
