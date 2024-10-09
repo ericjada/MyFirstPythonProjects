@@ -89,12 +89,18 @@ def compare_new_cases(data, countries):
     plt.savefig(os.path.join(visualizations_dir, 'comparison_new_cases.png'))  # Save the plot as a PNG file
     plt.show()
 
-# Call functions to visualize data for the United States
-plot_new_cases(data, 'United States')
-plot_total_cases_and_deaths(data, 'United States')
-plot_7day_avg_new_cases(data, 'United States')
-plot_case_fatality_rate(data, 'United States')
+# Main function to run the visualizations
+def main():
+    # Call functions to visualize data for the United States
+    plot_new_cases(data, 'United States')
+    plot_total_cases_and_deaths(data, 'United States')
+    plot_7day_avg_new_cases(data, 'United States')
+    plot_case_fatality_rate(data, 'United States')
 
-# Compare new cases between multiple countries (USA, India, Brazil)
-countries_to_compare = ['United States', 'India', 'Brazil']
-compare_new_cases(data, countries_to_compare)
+    # Compare new cases between multiple countries (USA, India, Brazil)
+    countries_to_compare = ['United States', 'India', 'Brazil']
+    compare_new_cases(data, countries_to_compare)
+
+# Entry point for the script
+if __name__ == "__main__":
+    main()
